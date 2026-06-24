@@ -28,11 +28,6 @@ if (firebaseConfig.apiKey && firebaseConfig.projectId) {
     auth = null;
     storage = null;
   }
-} else {
-    // On the server, log a warning if the config is missing.
-    if (typeof window === 'undefined') {
-        console.warn("\nWARNING: Firebase config is incomplete. Firebase features (Auth, Cloud Storage) will be disabled. Please add your Firebase credentials to the .env file.\n");
-    }
 }
 
 export { app, auth, storage };
